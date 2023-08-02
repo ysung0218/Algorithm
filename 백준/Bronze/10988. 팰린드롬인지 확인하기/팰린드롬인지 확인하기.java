@@ -5,13 +5,10 @@ class Main{
         Scanner sc = new Scanner(System.in);
         
         String str = sc.nextLine();
-        String str2 = "";
               
-        for(int j = str.length()-1; j >= 0; j--) {
-        	str2 += Character.toString(str.charAt(j));
-        }
+        StringBuilder sb = new StringBuilder(str).reverse();
         
-        if(str.equals(str2)) {
+        if(str.equals(sb.toString())) {
         	System.out.println(1);
         } else {
         	System.out.println(0);
